@@ -1,0 +1,66 @@
+{
+  "info": {
+    "_postman_id": "60edd016-07c7-4e7e-927a-0331bfdf4b6c",
+    "name": "Uceva-Auth-NodeJS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17113984"
+  },
+  "item": [
+    {
+      "name": "Generate Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"userId\": \"123\",\r\n    \"role\": \"admin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/generateToken",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "generateToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Validate Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Nzg3NjY3MzIsImV4cCI6MTc3ODc3MDMzMn0.NazLkPX4vZipvDV8d2u6wSwh0YFrivnIFU4QFkIeEUI\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/validateToken",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "validateToken"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
